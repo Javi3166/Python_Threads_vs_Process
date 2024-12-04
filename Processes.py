@@ -10,14 +10,14 @@ def square_numbers():
 
 if __name__ == '__main__':
     processes = []
-    num_processes = os.cpu_count()
+    num_processes = 6
 
     # create processes
     process_loop = 0
     for i in range(num_processes):
         process_loop += 1
         print("\nPROCESS #", process_loop)
-        p = Process(target=square_numbers())
+        p = Process(target=square_numbers)
         processes.append(p)
 
     # start

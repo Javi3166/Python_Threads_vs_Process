@@ -10,14 +10,14 @@ def square_numbers():
 
 if __name__ == '__main__':
     threads = []
-    num_threads = 10
+    num_threads = 26
 
     # create threads
     thread_loop = 0
     for i in range(num_threads):
         thread_loop += 1
         print("\nTHREAD #", thread_loop)
-        t = Thread(target=square_numbers())
+        t = Thread(target=square_numbers)
         threads.append(t)
 
     # start
