@@ -21,12 +21,11 @@ if __name__ == '__main__':
         thread_loop += 1
         print("\nTHREAD #", thread_loop)
         t = Thread(target=square_numbers())
-        t.start()
         threads.append(t)
 
     # start
-    # for t in threads:
-
+    for t in threads:
+        t.start()
 
     # join
     for t in threads:
