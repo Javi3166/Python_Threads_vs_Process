@@ -4,9 +4,10 @@ A process can spawn multiple threads
 + All threads within a process share the same memory
 + Lightweight
 + Starting a thread is faster than starting a process
-+ Great for I/O-bound tasks
++ Great for I/O-bound tasks / An example would be when the program would be communicating with slower devices like a hard
+drive or a network connection, while it is waiting it can switch to a different thread to start processing.
 
 - Threading is limited by GIL: Only one thread at a time
 - No effect for CPU-bound tasks
-- Not interruptable/killable
-- Careful with race conditions
+- Not interruptable/killable, thus must be careful of memory leaks
+- Careful with race conditions, which is when two or more threads attempt to modify the same variable at the same time
