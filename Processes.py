@@ -10,7 +10,7 @@ def square_numbers():
 
 if __name__ == '__main__':
     processes = []
-    num_processes = 6
+    num_processes = os.cpu_count()
 
     # create processes
     process_loop = 0
