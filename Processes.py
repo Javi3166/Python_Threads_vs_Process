@@ -8,6 +8,7 @@ def square_numbers():
         print(value)
         time.sleep(0.01)
 
+# if __name__ line needed for Windows computer as a guard rail
 if __name__ == '__main__':
     processes = []
     num_processes = os.cpu_count()
@@ -24,6 +25,7 @@ if __name__ == '__main__':
     for p in processes:
         p.start()
 
+    # joining will force a process to wait until the previous one finishes
     # join
     for p in processes:
         p.join()
